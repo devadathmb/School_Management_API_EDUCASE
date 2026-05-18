@@ -7,10 +7,14 @@ const app = express();
 app.use(express.json());
 
 const dbConfig = {
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || 'password',
-    database: process.env.DB_NAME || 'school_db'
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT || 18747,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    ssl: {
+        rejectUnauthorized: false
+    }
 };
 
 app.post('/addSchool', async (req, res) => {
