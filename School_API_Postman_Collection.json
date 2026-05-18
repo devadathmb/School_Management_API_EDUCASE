@@ -1,0 +1,105 @@
+{
+  "info": {
+    "name": "School Management APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add School - Springfield High",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Springfield High\",\n  \"address\": \"123 Main St\",\n  \"latitude\": 39.7817,\n  \"longitude\": -89.6501\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/addSchool",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["addSchool"]
+        }
+      }
+    },
+    {
+      "name": "Add School - Downtown Academy",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Downtown Academy\",\n  \"address\": \"200 Center St\",\n  \"latitude\": 39.7850,\n  \"longitude\": -89.6450\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/addSchool",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["addSchool"]
+        }
+      }
+    },
+    {
+      "name": "Add School - Westside Middle",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Westside Middle\",\n  \"address\": \"800 West Blvd\",\n  \"latitude\": 39.7500,\n  \"longitude\": -89.7000\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/addSchool",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["addSchool"]
+        }
+      }
+    },
+    {
+      "name": "Add School - Chicago Tech",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Chicago Tech\",\n  \"address\": \"100 Loop St\",\n  \"latitude\": 41.8781,\n  \"longitude\": -87.6298\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/addSchool",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["addSchool"]
+        }
+      }
+    },
+    {
+      "name": "List Schools",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/listSchools?latitude=39.78&longitude=-89.65",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["listSchools"],
+          "query": [
+            { "key": "latitude", "value": "39.78" },
+            { "key": "longitude", "value": "-89.65" }
+          ]
+        }
+      }
+    }
+  ]
+}
